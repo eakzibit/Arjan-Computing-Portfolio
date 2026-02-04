@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Random photo </title>
+</head>
+
+<h1> I am feeling a bit sentimental </h1> 
+
+<body style="text-align:center;" id="bgc">
+
+<img src="please-roll.png" id="picture" onclick="Roll(); background_color();">
+
+<br><br><br><br><br>
+
+<script>
+function background_color() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+
+  let color = "rgb(" + r + "," + g + "," + b + ")";
+  let bgc = document.getElementById("bgc");
+  bgc.style.backgroundColor = color;
+}
+
+function Roll() {
+  let photo = document.getElementById("picture");
+  let rpic = Math.floor(Math.random() * 9) + 1;
+  
+  if (rpic == 1) {
+    photo.src = "axolotl.jpeg";
+  } else if (rpic == 2) {
+    photo.src = "Bed.jpg";
+  } else if (rpic == 3) {
+    photo.src = "Computer.jpg";
+  } else if (rpic == 4) {
+    photo.src = "Egg.jpeg";
+  } else if (rpic == 5) {
+    photo.src = "Honey Badger.jpeg";
+  } else if (rpic == 6) {
+    photo.src = "Hotel.jpeg";
+  } else if (rpic == 7) {
+    photo.src = "axolotl.jpeg";
+  } else if (rpic == 8) {
+    photo.src = "Kickboxing.jpg";
+  } else if (rpic == 9) {
+    photo.src = "Lego.jpeg";
+  }
+}
+</script>
+
+</body>
+</html>

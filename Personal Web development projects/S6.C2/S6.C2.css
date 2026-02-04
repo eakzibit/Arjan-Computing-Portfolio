@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+.section {
+  height: %100; 
+}
+
+.red {
+  vertical-align: text-top;
+  background-color: red;
+  color:red;
+  height: 33%;
+}
+
+.white {
+  vertical-align: middle;
+  background-color: white;
+  color:white;
+  height: 15%;
+}
+.red2 {
+  vertical-align: text-bottom;
+  background-color: red;
+  color:red;
+  height: 33%;
+}

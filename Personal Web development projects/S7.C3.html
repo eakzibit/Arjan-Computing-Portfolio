@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+<title>Javacrypt</title>
+</head>
+
+<body style="background-color: Firebrick; font-family: Georgia, serif; text-align: center;">
+<h1 style="color:red;"> <u>Javacrypt</u> </h1>
+<p>you've rated your experience :</p>
+<p><i id="message"> </i></p>
+<img style="text-align: center-left;" id="star1" src="transparent-star.png">
+<img style="text-align: center-right;" id="star2" src="transparent-star.png">
+<img id="star3" src="transparent-star.png">
+
+<script>
+
+let rating = prompt("Enter a number 1,2,3 or 0... (pls dont)");
+let star1 = document.getElementById("star1");
+let star2 = document.getElementById("star2");
+let star3 = document.getElementById("star3");
+let message = document.getElementById("message");
+
+if (rating == 0) {
+    message.innerHTML = "Come Onnnnnn was it really that bad";
+}
+
+else if (rating==1){
+    star1.src = "gold-star.png";
+    message.innerHTML = ":c ";
+}
+
+else if (rating==2){
+    star1.src = "gold-star.png";
+    star2.src = "gold-star.png";
+    message.innerHTML = "I need to make things better";
+}
+
+else if (rating==3){
+    star1.src = "gold-star.png";
+    star2.src = "gold-star.png";
+    star3.src = "gold-star.png";
+    message.innerHTML = "YES- I mean thank you for using the service";
+}
+
+else {
+    message.innerHTML = "That is not right";
+}
+</script>
+<p><i id="message"> </i></p>
+</body>

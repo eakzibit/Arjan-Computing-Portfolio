@@ -1,0 +1,12 @@
+body {
+	font-family: Sans-serif;
+	background-color: #5ef2ff;
+}
+
+.box {
+	border-style:solid;
+}
+
+.display-flex {
+	display: flex
+

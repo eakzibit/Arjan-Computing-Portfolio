@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rocket Launch</title>
+  <style>
+    body {
+      text-align: center;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #rocket {
+      width: 100px;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body style="text-align: center;">
+
+  <h1><u><b>ROCKET LAUNCH</b></u></h1>
+
+  <button type="button" onclick="Countdown()">Start Countdown</button>
+
+  <h2 id="seconds_display"></h2>
+
+  <img id="rocket" src="rocket-blastoff.jpg">
+
+  <script>
+    function Countdown() {
+      let countdown = 10; 
+      let display = document.getElementById("seconds_display");
+      let rocket = document.getElementById("rocket");
+
+      display.innerHTML = countdown;
+
+      let timer = setInterval(function() {
+        countdown--;
+        display.innerHTML = countdown;
+
+        if (countdown <= 0) {
+          clearInterval(timer);
+          display.innerHTML = "🚀 Lift Off!";
+          rocket.style.display = "block";
+        }
+      }, 1000); 
+    }
+  </script>
+
+</body>
+</html>
+
+

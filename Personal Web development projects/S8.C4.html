@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javacrypt</title>
+</head>
+<body style="background-color: Firebrick; font-family: Georgia, serif; text-align: center;">
+
+<h1 style="color:red;"> <u>Javacrypt</u> </h1>
+<p>you've rated your experience :</p>
+<p><i id="message"></i></p>
+
+<img id="star1" src="transparent-star.png" onmouseover="MouseoverStar1()" onmouseout="reset()" onclick="SubmitStar1()">
+<img id="star2" src="transparent-star.png" onmouseover="MouseoverStar2()" onmouseout="reset()" onclick="SubmitStar2()">
+<img id="star3" src="transparent-star.png" onmouseover="MouseoverStar3()" onmouseout="reset()" onclick="SubmitStar3()">
+
+<script>
+let submit = false;
+let message = document.getElementById("message");
+
+function MouseoverStar1(){
+    if (!submit){
+        reset();
+        document.getElementById("star1").src = "gold-star.png";
+    }
+}
+
+function MouseoverStar2(){
+    if (!submit){
+        reset();
+        document.getElementById("star1").src = "gold-star.png";
+        document.getElementById("star2").src = "gold-star.png";
+    }
+}
+
+function MouseoverStar3(){
+    if (!submit){
+        reset();
+        document.getElementById("star1").src = "gold-star.png";
+        document.getElementById("star2").src = "gold-star.png";
+        document.getElementById("star3").src = "gold-star.png";
+    }
+}
+
+function reset(){
+    if (!submit){
+        document.getElementById("star1").src = "transparent-star.png";
+        document.getElementById("star2").src = "transparent-star.png";
+        document.getElementById("star3").src = "transparent-star.png";
+    }
+}
+
+function SubmitStar1(){
+    if (!submit){
+        reset();
+        document.getElementById("star1").src = "gold-star.png";
+        message.textContent = "Hmph fine";
+        submit = true;
+    }
+}
+
+function SubmitStar2(){
+    if (!submit){
+        reset();
+        document.getElementById("star1").src = "gold-star.png";
+        document.getElementById("star2").src = "gold-star.png";
+        message.textContent = "Ok, we will do better!";
+        submit = true;
+    }
+}
+
+function SubmitStar3(){
+    if (!submit){
+        document.getElementById("star1").src = "gold-star.png";
+        document.getElementById("star2").src = "gold-star.png";
+        document.getElementById("star3").src = "gold-star.png";
+        message.textContent = "YAY- I mean thanks for using this service";
+        submit = true;
+    }
+}
+</script>
+
+</body>
+</html>
+
